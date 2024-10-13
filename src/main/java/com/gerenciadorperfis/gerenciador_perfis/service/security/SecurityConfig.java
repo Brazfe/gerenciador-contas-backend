@@ -54,7 +54,7 @@ public class SecurityConfig {
             }
 
             Usuario usuario = usuarioService.buscaUsuarioPorLogin(username)
-                    .orElseThrow(() -> new UsernameNotFoundException("UsuÃ¡rio nÃ£o encontrado: " + username));
+                    .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado: " + username));
 
 
             return User.withUsername(usuario.getUsuario())
