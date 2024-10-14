@@ -52,9 +52,10 @@ public class SecurityConfig {
                            .roles("USER") 
                            .build();
             }
+            
 
             Usuario usuario = usuarioService.buscaUsuarioPorLogin(username)
-                    .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado: " + username));
+                    .orElseThrow(() -> new UsernameNotFoundException("Usuï¿½rio nï¿½o encontrado: " + username));
 
 
             return User.withUsername(usuario.getUsuario())
